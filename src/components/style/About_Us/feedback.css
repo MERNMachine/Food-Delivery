@@ -1,0 +1,146 @@
+.feedback-container {
+  margin-top:100px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+  max-width: 100%; /* Prevent overflow */
+  overflow: hidden; /* Hide horizontal scroll bar */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.feedback-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff7e5f;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+.feedback-row {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  animation: scroll infinite linear;
+  justify-content: center; /* Center cards on the screen */
+  align-items: center;
+}
+
+.feedback-row-1 {
+  margin-bottom: 40px;
+  animation-name: scroll-left;
+  animation-duration: 30s; /* Faster for better flow */
+}
+
+.feedback-row-2 {
+  animation-name: scroll-right;
+  animation-duration: 30s; /* Match speed for symmetry */
+}
+
+.feedback-card {
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: 80%; /* Set relative width for responsiveness */
+  max-width: 400px; /* Ensure cards don't exceed a fixed size */
+  height: auto; /* Adjust height dynamically */
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  text-align: left;
+  white-space: normal;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto; /* Center individual cards */
+}
+
+.feedback-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.feedback-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 40px; /* Adjust for quote symbol */
+}
+
+.feedback-text::before {
+  content: "“";
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff7e5f;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.feedback-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feedback-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff7e5f;
+}
+
+.feedback-author span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+}
+/* Scroll Left Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Scroll Right Animation */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .feedback-row {
+    gap: 10px; /* Smaller gap for small screens */
+  }
+
+  .feedback-card {
+    width: 90%; /* Take more space on smaller screens */
+    max-width: 350px; /* Reduce max size */
+    margin-bottom: 20px; /* Add space between rows */
+  }
+
+  .feedback-title {
+    font-size: 2rem;
+  }
+
+  .feedback-text {
+    font-size: 0.9rem;
+  }
+
+  .feedback-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
