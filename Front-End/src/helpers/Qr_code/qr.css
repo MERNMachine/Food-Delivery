@@ -1,0 +1,8 @@
+video {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
