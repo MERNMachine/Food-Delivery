@@ -1,0 +1,538 @@
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.like-dislike {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.like-section,
+.dislike-section {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.accordion-category {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.accordion-header {
+  font-size: 20px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.accordion-header:hover {
+  color: #ffa500;
+}
+
+.accordion-arrow {
+  font-size: 16px;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+
+.accordion-body {
+  padding-left: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-body.show {
+  padding-top: 10px;
+}
+
+.category-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+.category-option input {
+  margin-right: 10px;
+ 
+}
+
+.category-option:hover {
+  color: #ffa500;
+  font-weight: bold;
+}
+
+.category-panel {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Menu List */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-card {
+  /*
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;*/
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  /* Ensure relative positioning for the tags */
+}
+
+.menulist-image-tags {
+  position: relative;
+}
+
+.menulist-tags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card:hover h5 {
+  color: #ffa500;
+}
+
+.menu-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+  cursor: pointer;
+  /* Smooth zoom effect */
+}
+
+.menu-image:hover img {
+  transform: scale(1.1);
+  /* Slight zoom effect */
+}
+
+.menu-details {
+  padding: 15px;
+}
+
+.menu-details h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+  transition: all 0.5s ease;
+}
+
+.menu-details p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.previous-price {
+  margin-left: 5px;
+  font-size: 1.2rem;
+  color: #aaa;
+  text-decoration: line-through;
+  /* Strikethrough for previous price */
+}
+
+.rating {
+  font-size: 16px;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+}
+
+.add-to-cart {
+  background: none;
+  color: #ffa500;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, #ffa500, #ff7e5f);
+  border-image-slice: 1;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.8s ease;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.add-to-cart:hover {
+  background: linear-gradient(45deg, #ffa500, #ff7e5f);
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Transparent background */
+  z-index: 9999;
+  /* Make sure it is above other elements */
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 5px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #666;
+  border-radius: 50px;
+  /* Ensures rounded corners for smaller screens */
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+.search-input:focus::placeholder {
+  color: transparent;
+}
+.search-input:focus {
+  border: none;
+  outline: none;
+}
+
+.search-bar:focus-within {
+  border: 2px solid #ffd700;
+  /* Yellow border on focus */
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+  /* Yellow glow effect */
+}
+
+.search-button {
+  background-color: #ffa500;
+  /* Green button background */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.search-button i {
+  color: #fff;
+  /* White search icon */
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #fbc02d;
+  /* Darker green on hover */
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide category-panel on smaller screens */
+@media (max-width: 700px) {
+  .category-panel {
+    display: none; /* Hide the category panel */
+  }
+  .menu-container {
+    grid-template-columns: 1fr; /* Full-width layout for menu-list */
+  }
+  .menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 15px; /* Space between cards */
+    padding: 10px; /* Padding around the grid */
+  }
+
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .menu-image img {
+    width: 100%;
+    height: 160px; /* Smaller image height */
+    object-fit: cover; /* Ensure the image fills the space */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top of the card */
+  }
+
+  .menu-details {
+    padding: 10px;
+    text-align: center; /* Center-align text for a clean look */
+  }
+
+  .menu-details h5 {
+    font-size: 14px; /* Smaller title font size */
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .menu-details p {
+    font-size: 12px; /* Smaller description font size */
+    color: #777;
+    margin-bottom: 8px;
+  }
+
+  .price {
+    font-size: 25px; /* Adjusted font size for the price */
+    font-weight: bold;
+    color: #ffa500;
+  }
+
+  .previous-price {
+    font-size: 21px; /* Smaller font size for the old price */
+    color: #aaa;
+    text-decoration: line-through;
+    margin-left: 5px;
+    display: inline-block; /* Ensure it stays inline with the price */
+  }
+
+  .add-to-cart {
+    background: none;
+    color: #ffa500;
+    border: 2px solid #ffa500;
+    border-radius: 20px;
+    font-size: 12px; /* Smaller button text size */
+    padding: 5px 10px; /* Compact padding for the button */
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .add-to-cart:hover {
+    background: #ffa500;
+    color: #fff;
+    border-color: transparent;
+  }
+
+  /* Nutritional Tags Styling */
+  .menulist-tags {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Spacing between tags */
+    margin-bottom: 10px; /* Add space below the tags */
+  }
+
+  .tag-circle {
+    background: #ffa500;
+    color: #fff;
+    font-size: 12px; /* Smaller font size for tags */
+    padding: 5px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+/* Hide category-panel on smaller screens */
+@media (max-width: 440px) {
+  .category-panel {
+    display: none; /* Hide the category panel */
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr; /* Full-width layout for menu-list */
+  }
+
+  .menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 10px; /* Smaller gap between cards */
+    padding: 5px; /* Reduced padding for compact layout */
+  }
+
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    padding: 8px; /* Compact padding for smaller cards */
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff;
+  }
+
+  .menu-image img {
+    width: 100%;
+    height: 140px; /* Smaller image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 6px 6px 0 0; /* Rounded corners for the top of the card */
+  }
+
+  .menu-details {
+    padding: 8px; /* Reduced padding for details */
+    text-align: center; /* Center-align content */
+  }
+
+  .menu-details h5 {
+    font-size: 12px; /* Smaller title font size */
+    margin-bottom: 4px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .menu-details p {
+    font-size: 10px; /* Smaller description font size */
+    color: #777;
+    margin-bottom: 6px;
+  }
+
+  .price {
+    font-size: 20px; /* Reduced size for price */
+    font-weight: bold;
+    color: #ffa500;
+    margin-bottom: 4px;
+  }
+
+  .previous-price {
+    font-size: 16px; /* Smaller font size for old price */
+    color: #aaa;
+    text-decoration: line-through;
+    margin-left: 5px;
+    display: inline-block; /* Ensure it aligns with price */
+    vertical-align: middle; /* Align it vertically with the price */
+  }
+
+  .add-to-cart {
+    background: none;
+    color: #ffa500;
+    border: 2px solid #ffa500;
+    border-radius: 16px;
+    font-size: 10px; /* Reduced button text size */
+    padding: 4px 8px; /* Smaller padding for a compact button */
+    margin: 6px auto; /* Center the button */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .add-to-cart:hover {
+    background: #ffa500;
+    color: #fff;
+    border-color: transparent;
+  }
+
+  .menulist-tags {
+    display: flex;
+    justify-content: center;
+    gap: 4px; /* Smaller spacing between tags */
+    margin-bottom: 6px; /* Reduced margin below tags */
+  }
+
+  .tag-circle {
+    background: #ffa500;
+    color: #fff;
+    font-size: 12px; /* Smaller font size for tags */
+    padding: 4px 6px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+  }
+}

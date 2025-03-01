@@ -1,0 +1,203 @@
+.menu-details-container {
+  width: 100%; /* Full width relative to the viewport */
+  max-width: 100vw; /* Prevent overflow beyond the screen */
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.menu-details-header {
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.menu-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.menu-content {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-image-section {
+  flex: 1;
+  position: relative;
+}
+
+.menu-image {
+  width: 100%; /* Ensure the image fits the container */
+  max-width: 100%; /* Prevent image overflow */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.menu-tag {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-tag.gf {
+  background-color: #00bcd4; /* Blue */
+}
+
+.menu-tag.veg {
+  background-color: #4caf50; /* Green */
+}
+
+.menu-tag.keto {
+  background-color: #fbc02d; /* Yellow */
+}
+
+.menu-tag.lf {
+  background-color: #ff5722; /* Orange */
+}
+
+.menu-tag.df {
+  background-color: #9e9e9e; /* Gray */
+}
+
+.menu-interactions {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+.likes,
+.dislikes,
+.detail-rating {
+  color: #777;
+}
+
+.menu-details-section {
+  flex: 1.5;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.menu-details-section h2 {
+  font-size: 1.5rem;
+  color: #ffa500;
+  border-bottom: 2px solid #ffa500;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.ingredients-list,
+.allergens,
+.full-ingredients {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.nutrition-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.nutrition-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.price-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /* Space out the price details and the button */
+  align-items: center;
+}
+
+.price-details {
+  display: flex;
+  align-items: baseline; /* Align prices properly */
+  gap: 10px; /* Add space between price and previous price */
+}
+
+.price-details.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.price-details.previous-price {
+  font-size: 1.2rem;
+  color: #aaa;
+  text-decoration: line-through; /* Add strikethrough for the previous price */
+}
+
+.add-to-cart {
+  background: linear-gradient(45deg, #ffa500, #ff7e5f);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .menu-details-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .menu-details-header {
+    text-align: center;
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .menu-content {
+    flex-direction: column; /* Stack the content vertically */
+    gap: 10px; /* Add spacing between sections */
+  }
+
+  .menu-image-section,
+  .menu-details-section {
+    width: 100%; /* Ensure sections take full width */
+    margin: 0 auto;
+  }
+
+  .menu-image {
+    height: 200px; /* Adjust image height for smaller screens */
+    object-fit: cover; /* Maintain the aspect ratio */
+  }
+
+  .add-to-cart {
+    padding: 8px 12px; /* Reduce button padding */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .price-section {
+    flex-direction: column; /* Stack price and button vertically */
+    align-items: center; /* Center align */
+  }
+}
