@@ -1,0 +1,214 @@
+.cart-items {
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 100px;
+}
+
+.full {
+    margin-top: 100px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top:80px
+}
+
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+}
+
+.empty-cart img {
+    max-width: 400px;
+    margin-bottom: 20px;
+    /* Add spacing between the image and the text */
+}
+
+.empty-cart p {
+    font-size: 50px;
+    color: #555;
+}
+
+.cart-item-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* Rounded corners for images */
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.cart-item-details h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cart-item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffa500;
+}
+
+.button-container {
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    margin-bottom: 30px;
+    /* Remove default margin */
+}
+
+/* Checkout button styling */
+.checkout-button {
+    background: linear-gradient(45deg, #f9d423, #ff4e50);
+    /* Gradient background */
+    color: white;
+    /* White text */
+    font-size: 16px;
+    /* Text size */
+    font-weight: bold;
+    /* Bold text */
+    border: none;
+    /* Remove border */
+    border-radius: 25px;
+    /* Rounded corners */
+    padding: 12px 30px;
+    /* Button padding */
+    text-align: center;
+    /* Center text */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Smooth animation */
+}
+
+.checkout-button:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    /* Increase shadow on hover */
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-button {
+    width: 32px;
+    height: 32px;
+    background: #ffa500;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.quantity-button:hover {
+    background: #feb47b;
+    transform: scale(1.1);
+}
+
+.cart-item-quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #ffa500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.remove-button:hover {
+    transform: scale(1.2);
+}
+.total-pay{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    padding-right: 15%;
+}
+.total-pay p{
+    font-size: 30px;
+    color: #ffa500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/* Responsive styles */
+@media (max-width: 576px) {
+    .cart-items {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+        align-items: center;
+    }
+
+    .cart-item-image {
+        width: 200px; /* Slightly smaller image on small screens */
+        height: 200px;
+        margin-right: 10px;
+    }
+
+    .cart-item-details {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .cart-item-actions {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .quantity-button {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .cart-item-quantity {
+        font-size: 14px;
+    }
+
+    .remove-button {
+        font-size: 16px;
+    }
+
+    .total-pay p {
+        font-size: 24px;
+    }
+}
