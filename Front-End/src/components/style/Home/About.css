@@ -1,0 +1,115 @@
+.about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #F5FEFD;
+  }
+  
+  .about-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .highlight {
+    color: #e74c3c; /* Highlighted red color */
+  }
+  
+  .testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .testimonial-content {
+    max-width: 50%;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+  }
+  
+  .testimonial-image {
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-image:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #ffa500;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth zoom and shadow */
+  }
+  
+  .image:hover {
+    transform: scale(1.1) rotate(5deg); /* Zoom and slight rotation */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth text color change */
+  }
+  
+  .testimonial-image:hover .name {
+    color: #e74c3c; /* Highlight the name on hover */
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .company {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .website {
+    font-size: 14px;
+    color: #e74c3c;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .role {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .dots {
+    margin-top: 30px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #e74c3c;
+  }
+  

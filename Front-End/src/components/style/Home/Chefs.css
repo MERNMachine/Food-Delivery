@@ -1,0 +1,64 @@
+.chefs {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .chefs-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .highlight {
+    color: #e74c3c; /* Highlighted red color */
+  }
+  
+  .chefs-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .chef-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+  }
+  
+  .chef-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .chef-image {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+  }
+  
+  .chef-card:hover .chef-image {
+    transform: scale(1.06); /* Zoom in on hover */
+  }
+  .chef-card:hover .chef-name{
+    color:#ff7f00;
+  }
+  .chef-name {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-weight: 600;
+  }
+  
+  .chef-title {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+  }
+  

@@ -1,0 +1,148 @@
+/* Footer Section */
+.footer {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px 0;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.socials {
+  display: inline-block;
+  font-size: 14px;
+}
+.socials a{
+  margin-left: 5px;
+  margin-right: 5px;
+  color:  #ffa500;
+}
+.newsletter {
+  display: flex;
+  flex-wrap: wrap; /* Ensures input and button wrap */
+  justify-content: center;
+  gap: 10px; /* Add gap for spacing */
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+}
+
+.newsletter-button {
+  padding: 10px 15px;
+  background: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap; /* Allow sections to wrap on small screens */
+  justify-content: center;
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  gap: 20px; /* Adds spacing between sections */
+}
+
+.footer-section {
+  flex: 1 1 calc(33.33% - 20px); /* 3 sections per row on large screens */
+  max-width: calc(33.33% - 20px);
+  text-align: center;
+}
+
+.footer-section h4 {
+  color: #d4a373;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  margin-top: 20px;
+  color: #666;
+  border-top: 1px solid #333;
+  padding: 10px 0;
+}
+
+@media (max-width: 1024px) {
+  .footer-main {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+
+  .footer-section {
+    flex: 1 1 calc(50% - 20px); /* 2 sections per row on tablets */
+    max-width: calc(50% - 20px);
+  }
+
+  .newsletter {
+    flex-direction: column; /* Stacks input and button */
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column; /* Stack all sections */
+    padding: 20px;
+  }
+
+  .footer-section {
+    flex: 1 1 100%; /* Each section takes full width */
+    max-width: 100%;
+  }
+
+  .newsletter-input,
+  .newsletter-button {
+    width: 100%; /* Full width input and button */
+  }
+}

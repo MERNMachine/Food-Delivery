@@ -1,0 +1,65 @@
+.promotions-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .promo-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .promo-content {
+    padding: 20px;
+  }
+  
+  .promo-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .promo-content .highlight {
+    color: #ffa500;
+  }
+  
+  .promo-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .promo-button {
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .promo-button:hover {
+    background-color: #e69500;
+  }
+  
+  .promo-image {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .promo-image-col {
+    text-align: center;
+  }
+  .special-food{
+    transition: transform 0.3s ease ;
+  }
+  .special-food:hover .promo-image{
+    transform: translateY(-5px);
+    
+  }

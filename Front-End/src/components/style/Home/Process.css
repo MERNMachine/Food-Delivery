@@ -1,0 +1,36 @@
+.how-it-works {
+
+    background: linear-gradient(to bottom, #fffaf0, #fff);
+    padding: 50px 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7f00;
+    margin-bottom: 40px;
+}
+
+.step {
+    padding: 20px;
+}
+
+.step-image {
+    width: 80px;
+    /* Adjust size of the images */
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step-description {
+    font-size: 0.9rem;
+    color: #555;
+}

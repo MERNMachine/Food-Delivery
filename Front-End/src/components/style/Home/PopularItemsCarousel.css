@@ -1,0 +1,149 @@
+.carousel {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 20 auto; /* Center horizontally */
+  max-width: 1400px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+}
+
+.carousel-items {
+  margin-top: 15px;
+  display: flex;
+  gap: 0; /* Remove gap to fit items */
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth transition effect */
+  width: 100%;
+  will-change: transform; /* Optimize for performance */
+}
+.card {
+  flex: 1 0 calc(20% - 10px); /* 5 items with equal width, accounting for small gaps */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin: 0 10px; /* Small gap between cards */
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+.card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.5s ease;
+}
+.card:hover .card-title {
+  color: #ff6200; /* Highlighted text color */
+}
+
+.card:hover .card-restaurant {
+  color: #333;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 4px 0 5px;
+}
+
+.card-restaurant {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.card-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-button {
+  background-color: #ff6200;
+  color: #fff;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #e55a00;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ff6200;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-arrow.left-arrow {
+  left: 10px;
+}
+
+.carousel-arrow.right-arrow {
+  right: 10px;
+}
+/* Responsive for tablets (width < 820px) */
+@media (max-width: 820px) {
+  .card {
+    flex: 1 0 calc(33.33% - 10px); /* Show 3 cards per row */
+  }
+}
+
+/* Responsive for small screens (width < 600px) */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 0 calc(50% - 10px); /* Show 2 cards per row */
+  }
+}
+
+/* Responsive for extra small screens (width < 390px) */
+@media (max-width: 390px) {
+  .card {
+    flex: 1 0 calc(50% - 10px); /* Show 2 cards per row */
+  }
+
+  .carousel-arrow {
+    font-size: 1.5rem; /* Smaller arrows for small screens */
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-restaurant,
+  .card-price {
+    font-size: 0.85rem;
+  }
+
+  .card-button {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+}
